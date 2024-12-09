@@ -15,6 +15,7 @@ build_info.h
 /**/toolchain/linux/
 /**/toolchain/cygwin/
 /**/toolchain/darwin/
+project/realtek_amebaD_va0_example/GCC-RELEASE/project_hp/toolchain/asdk/
 
 # menuconfig lxdialog files
 /**/lxdialog/
@@ -24,3 +25,8 @@ build_info.h
 *.dep
 *.ewt
 /**/EWARM-RELEASE/Debug/
+
+# flash tool
+tools/AmebaD/Image_Tool_Linux/mpp.ini
+tools/AmebaD/Image_Tool_Linux/*.txt
+tools/AmebaD/Image_Tool_Linux/Image_All.bin
