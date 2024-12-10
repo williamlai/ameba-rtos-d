@@ -212,6 +212,21 @@ ifeq ($(CONFIG_MATTER_EN), y)
 LINK_APP_LIB += -Wl,--start-group $(ROOTDIR)/lib/application/lib_main.a $(ROOTDIR)/lib/application/libCHIP.a -Wl,--end-group
 endif
 
+ # AWS IoT Smart Home Main
+LINK_APP_LIB += -Wl,--start-group
+LINK_APP_LIB += $(ROOTDIR)/lib/application/libiotshd_main.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libcjson.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libcoreMQTT.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libcorePKCS11.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libcorejson.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libiotjobs.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libiotshd_device_DataModelHandler.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libiotshd_device_FleetProvisioning.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libiotshd_device_MqttAgent.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libiotshd_jobs_handler.a
+LINK_APP_LIB += $(BASEDIR)/component/common/application/aws_iotshd/IoT-Smarthome-Device-SDK/lib/libiotshd_mqtt_adapter.a
+LINK_APP_LIB += -Wl,--end-group
+
 rom: build_target_folder copy_ld_rom check_toolchain build_info.h make_subdirs_rom package_prebuilt_rom_objs rom_linker 
 rom_ns: build_target_folder copy_ld_rom_ns check_toolchain build_info.h make_subdirs_rom_ns package_prebuilt_rom_objs rom_linker_ns 
 image2_ns: build_target_folder copy_ld_img2 check_toolchain build_info.h make_subdirs linker_image2_ns 

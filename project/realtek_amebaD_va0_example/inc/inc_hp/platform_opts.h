@@ -771,4 +771,7 @@ in lwip_opt.h for support uart adapter*/
 #include "platform_opts_matter.h"
 #endif /* CONFIG_MATTER */
 
+// AWS IoT SmartHome Device example
+#define CONFIG_EXAMPLE_AWS_IOTSHD       1
+
 #endif

@@ -1,0 +1,3 @@
+[submodule "component/common/application/aws_iotshd"]
+	path = component/common/application/aws_iotshd
+	url = git@github.com:williamlai/IoT-Smarthome-Device-SDK-AmebaD-port.git

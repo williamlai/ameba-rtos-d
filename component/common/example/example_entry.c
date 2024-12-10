@@ -500,6 +500,10 @@
 #include <matter_example_entry.h>
 #endif
 
+#if defined(CONFIG_EXAMPLE_AWS_IOTSHD) && CONFIG_EXAMPLE_AWS_IOTSHD
+#include <aws_iotshd/example_aws_iotshd.h>
+#endif
+
 /*
 	Preprocessor of example
 */
@@ -1155,5 +1159,9 @@ example_hilink();
 
 #if defined(CONFIG_EXAMPLE_MATTER) && CONFIG_EXAMPLE_MATTER
 	matter_example_entry();
+#endif
+
+#if defined(CONFIG_EXAMPLE_AWS_IOTSHD) && CONFIG_EXAMPLE_AWS_IOTSHD
+	example_aws_iotshd();
 #endif
 }

@@ -30,3 +30,6 @@ project/realtek_amebaD_va0_example/GCC-RELEASE/project_hp/toolchain/asdk/
 tools/AmebaD/Image_Tool_Linux/mpp.ini
 tools/AmebaD/Image_Tool_Linux/*.txt
 tools/AmebaD/Image_Tool_Linux/Image_All.bin
+
+# IDE
+.vscode/
