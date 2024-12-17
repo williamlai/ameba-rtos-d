@@ -21,8 +21,6 @@ NETWORK = $(BASEDIR)/component/common/network
 #*****************************************************************************#
 OBJS +=	\
 		$(NETWORK)/sntp/sntp.o\
-		$(NETWORK)/websocket/wsserver_tls.o\
-		$(NETWORK)/websocket/wsclient_tls.o\
 		$(LWIPDIR)/src/core/ipv4/dhcp.o \
 		$(LWIPDIR)/src/core/ipv6/dhcp6.o \
 		$(LWIPDIR)/src/core/dns.o \
@@ -35,8 +33,6 @@ OBJS +=	\
 		$(LWIPDIR)/src/core/ipv6/mld6.o \
 		$(LWIPDIR)/src/core/ipv6/nd6.o \
 		$(LWIPDIR)/src/api/err.o \
-		$(NETWORK)/httpc/httpc_tls.o\
-		$(NETWORK)/httpd/httpd_tls.o\
 		$(NETWORK)/mDNS/mDNSPlatform.o\
 		$(LWIPDIR)/src/core/stats.o \
 		$(LWIPDIR)/src/core/sys.o \

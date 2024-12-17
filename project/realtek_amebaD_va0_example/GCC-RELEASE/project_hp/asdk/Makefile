@@ -64,7 +64,8 @@ LINK_ROM_LIB_NS =
 ifeq ($(CONFIG_MATTER_EN), y)
 LINK_ROM_SYMBOL_NS = $(MATTER_BUILDDIR)/ld/rlx8721d_rom_symbol_acut_matter.ld
 else
-LINK_ROM_SYMBOL_NS = ./ld/rlx8721d_rom_symbol_acut.ld
+# LINK_ROM_SYMBOL_NS = ./ld/rlx8721d_rom_symbol_acut.ld
+LINK_ROM_SYMBOL_NS = ./ld/rlx8721d_rom_symbol_acut_awsiotshd.ld
 endif
 LINK_ROM_SYMBOL_S = ./ld/rlx8721d_rom_symbol_acut_s.ld
 LINK_ROM_SYMBOL_BOOT = ./ld/rlx8721d_rom_symbol_acut_boot.ld
@@ -138,7 +139,7 @@ ifeq ($(CONFIG_WIFI_EN), y)
 LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_httpc.a
 LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_httpd.a
 LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_mdns.a
-LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_websocket.a
+# LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_websocket.a
 LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_tftp.a
 LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_dct.a
 LINK_APP_LIB += $(ROOTDIR)/lib/application/lib_coap.a
@@ -301,7 +302,7 @@ make_subdirs_lib:
 	@make -C make/wps all
 	@make -C make/network/httpc all
 	@make -C make/network/httpd all
-	@make -C make/network/websocket all
+	# @make -C make/network/websocket all
 	#@make -C make/network/http2 all
 	@make -C make/network/eap all
 	@make -C make/network/tftp all
